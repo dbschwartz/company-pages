@@ -12,11 +12,10 @@
       <div class="card-content">
         <div class="content">
           <p>ID {{id}}</p>
-
         </div>
       </div>
       <footer class="card-footer">
-        <a href="#" class="card-footer-item">Edit</a>
+         <router-link :to="{ name: 'full', params: { id }}">Full Detail</router-link>
       </footer>
     </div>
   </div>
@@ -27,7 +26,7 @@ export default {
   name: 'CompanySimple',
   props: {
     id: {
-      type: String,
+      type: Number,
       required: true,
     },
     name: {
