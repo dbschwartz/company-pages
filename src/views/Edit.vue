@@ -54,7 +54,7 @@
             <input
               class="input"
               type="text"
-              :value="company.subscriptionsPerEmployees"
+              :value="company.subscriptionsPerEmployee"
               style="width: fit-content; height: fit-content"
               ref="subscriptionsPerEmployee"
             />
