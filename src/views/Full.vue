@@ -1,6 +1,15 @@
 <template>
+<div>
+<article class="message is-success"
+v-if="this.$route.params.message">
+  <div class="message-header">
+    <p>Success</p>
+    <button class="delete" aria-label="delete"></button>
+  </div>
+
+</article>
   <div class="card">
-    <header class="card-header">
+    <header class="card-header">"
       <p class="card-header-title">
         {{ company.name }}
       </p>
@@ -28,9 +37,14 @@
       </div>
     </div>
     <footer class="card-footer">
-      <a href="#" class="card-footer-item">Edit</a>
+      <router-link
+        :to="{ name: 'edit', params: { id: company.id } }"
+        class="card-footer-item"
+        >Edit</router-link
+      >
     </footer>
   </div>
+</div>
 </template>
 
 <script>

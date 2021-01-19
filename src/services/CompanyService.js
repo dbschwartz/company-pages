@@ -38,7 +38,13 @@ function getById(id) {
   return Promise.resolve(company);
 }
 
+function ChangeObj(toChange) {
+  const company = fakeCompanies.findIndex((c) => c.id === toChange.id);
+  fakeCompanies[company] = toChange;
+}
+
 export default {
   getAll,
   getById,
+  ChangeObj,
 };

@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import List from './views/List.vue';
 import Full from './views/Full.vue';
+import Edit from './views/Edit.vue';
 
 Vue.use(Router);
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/full/:id',
       name: 'full',
       component: Full,
+    },
+    {
+      path: '/edit/:id',
+      name: 'edit',
+      component: Edit,
     },
   ],
 });
